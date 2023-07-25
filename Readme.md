@@ -17,7 +17,7 @@
 ```grade, err := strconv.ParseFloat(input, 64)```
 ```guess, err := strconv.Atoi(input)```
 ## strings
-```string.TrimSpace()```
+```string.TrimSpace(input)```
 
 ## http
 ```response, err := http.Get("http://golang.org")```
