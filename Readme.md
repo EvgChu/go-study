@@ -3,30 +3,51 @@
 # LIBRARY
 
 ##	"bufio"
-```bufio.NewReader(os.Stdin) ```
+```go
+bufio.NewReader(os.Stdin) 
+```
 
 ##	"fmt"
-```fmt.Print("Enter a grade: ")```
-```fmt.Println("You have", 10-guesses, "guesses left.")```
+```go
+fmt.Print("Enter a grade: ")
+fmt.Println("You have", 10-guesses, "guesses left.")
+fmt.Printf("About one-third: %0.2f\n", 1.0/3.0)
+resultString := fmt.Sprintf("About one-third: %0.2f\n", 1.0/3.0) fmt.Printf(resultString)
+```
+
 ##	"os"
-```file, err := os.Open("myfile.txt")```
+```go
+file, err := os.Open("myfile.txt")
+```
 ## type
 
 ## strconv
-```bool, err := strconv.ParseBool("true")```
-```grade, err := strconv.ParseFloat(input, 64)```
-```guess, err := strconv.Atoi(input)```
+```go
+bool, err := strconv.ParseBool("true")
+grade, err := strconv.ParseFloat(input, 64)
+guess, err := strconv.Atoi(input)
+```
 ## strings
-```string.TrimSpace(input)```
+```go
+string.TrimSpace(input)
+```
 
 ## http
-```response, err := http.Get("http://golang.org")```
+```go
+response, err := http.Get("http://golang.org")
+```
 
 ## log
-```log.Fatal(err)```
+```go
+log.Fatal(err)
+```
 
 ## 	"math/rand"
-```target := rand.Intn(100) + 1```
+```go
+target := rand.Intn(100) + 1
+```
 
 ## 	"time"
-```seconds := time.Now().Unix()```
+```go
+seconds := time.Now().Unix()
+```
