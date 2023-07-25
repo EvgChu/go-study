@@ -21,3 +21,4 @@
 ```response, err := http.Get("http://golang.org")```
 
 ## log
+```log.Fatal(err)```
