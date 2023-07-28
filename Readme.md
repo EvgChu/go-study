@@ -64,3 +64,11 @@ target := rand.Intn(100) + 1
 ```go
 seconds := time.Now().Unix()
 ```
+
+## "errors"
+```go
+err := errors.New("height can't be negative")
+fmt.Println(err.Error())
+fmt.Println(err)
+err := fmt.Errorf("a height of %0.2f is invalid", -2.33333)
+```
