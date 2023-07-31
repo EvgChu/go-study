@@ -13,6 +13,11 @@ func printPointer(myBoolPointer *bool) {
 	fmt.Println(*myBoolPointer)
 }
 
+func negate(myBoolean *bool){
+	*myBoolean = !(*myBoolean)
+	return 
+}
+
 func main() {
 	var myInt int
 	var myIntPointer *int
@@ -22,5 +27,6 @@ func main() {
 	fmt.Println(*createPointer())
 	boolVar := true
 	printPointer(&boolVar)
-
+	negate(&boolVar)
+	printPointer(&boolVar)
 }
