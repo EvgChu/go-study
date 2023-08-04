@@ -1,13 +1,9 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
-	"keyboard"
+	"hfg/keyboard"
 	"log"
-	"os"
-	"strconv"
-	"strings"
 )
 
 func main() {
