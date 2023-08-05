@@ -1,7 +1,7 @@
 package main
 
 import (
-	"hfg/dates"
+	"hfg/chapter4/dates"
 	"fmt"
 )
 
