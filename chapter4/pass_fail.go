@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"hfg/keyboard"
+	"github.com/EvgChu/keyboard"
 	"log"
 )
 
