@@ -4,7 +4,10 @@
 
 ##	"bufio"
 ```go
-bufio.NewReader(os.Stdin) 
+    bufio.NewReader(os.Stdin) 
+
+    scanner := bufio.NewScanner(file)
+    for scanner.Scan() {...}
 ```
 
 ##	"fmt"
