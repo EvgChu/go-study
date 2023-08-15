@@ -39,4 +39,12 @@ func main() {
 	fmt.Println(inRange(1, 100, -12.5, 3.2, 0, 50, 103.5))
 	fmt.Println(inRange(-10, 10, 4.1, 12, -12, -5.2))
 	fmt.Println(sum(1, 3, 4, 5))
+	jewelry := make(map[string]float64)
+	jewelry["necklace"] = 89.99
+	jewelry["earrings"] = 79.99
+	clothing := map[string]float64{"pants": 59.99, "shirt": 39.99}
+	fmt.Println("Earrings:", jewelry["earrings"])
+	fmt.Println("Necklace:", jewelry["necklace"])
+	fmt.Println("Shirt:", clothing["shirt"])
+	fmt.Println("Pants:", clothing["pants"])
 }
