@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"sort"
 )
 
 func exapmlePage252() {
@@ -43,8 +44,39 @@ func taskPage251() {
 	}
 }
 
+func exapmlePage256() {
+	grades := map[string]float64{"Alma": 74.2, "Rohit": 86.5, "Carl": 59.7}
+	for name, grade := range grades {
+		fmt.Printf("%s has a grade of %0.1f%%\n", name, grade)
+	}
+	fmt.Println("Class roster:")
+	for name := range grades {
+		fmt.Println(name)
+	}
+	fmt.Println("Grades:")
+	for _, grade := range grades {
+		fmt.Println(grade)
+	}
+}
+
+func exapmlePage257() {
+	grades := map[string]float64{"Alma": 74.2, "Rohit": 86.5, "Carl": 59.7}
+	var names []string
+	for name := range grades {
+		names = append(names, name)
+	}
+	sort.Strings(names)
+	for _, name := range names {
+		fmt.Printf("%s has a grade of %0.1f%%\n", name, grades[name])
+	}
+}
+
 func main() {
 	taskPage251()
 	fmt.Printf("--------------------\n")
 	exapmlePage252()
+	fmt.Printf("--------------------\n")
+	exapmlePage256()
+	fmt.Printf("--------------------\n")
+	exapmlePage257()
 }

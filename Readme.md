@@ -75,3 +75,10 @@ fmt.Println(err.Error())
 fmt.Println(err)
 err := fmt.Errorf("a height of %0.2f is invalid", -2.33333)
 ```
+
+
+## "sort
+
+```go
+sort.Strings(names)
+```
