@@ -71,6 +71,13 @@ func exapmlePage257() {
 	}
 }
 
+func taskPage260() {
+	ranks := map[string]int{"bronze": 3, "silver": 2, "gold": 1}
+	for medal, rank := range ranks {
+		fmt.Printf("The %s medal's rank is %d\n", medal, rank)
+	}
+}
+
 func main() {
 	taskPage251()
 	fmt.Printf("--------------------\n")
@@ -79,4 +86,6 @@ func main() {
 	exapmlePage256()
 	fmt.Printf("--------------------\n")
 	exapmlePage257()
+	fmt.Printf("--------------------\n")
+	taskPage260()
 }
