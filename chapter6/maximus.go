@@ -47,4 +47,15 @@ func main() {
 	fmt.Println("Necklace:", jewelry["necklace"])
 	fmt.Println("Shirt:", clothing["shirt"])
 	fmt.Println("Pants:", clothing["pants"])
+	counters := map[string]int{"a": 3, "b": 0}
+	var value int
+	var ok bool
+	value, ok = counters["a"]
+	fmt.Println(value, ok)
+	value, ok = counters["b"]
+	fmt.Println(value, ok)
+	value = counters["c"]
+	fmt.Println(value, "c")
+	value, ok = counters["c"]
+	fmt.Println(value, ok)
 }
