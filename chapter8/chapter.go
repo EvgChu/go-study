@@ -1,0 +1,61 @@
+package main
+
+import "fmt"
+
+type part struct {
+	description string
+	count       int
+}
+
+type car struct {
+	name     string
+	topSpeed float64
+}
+
+type subscriber struct {
+	name   string
+	rate   float64
+	active bool
+}
+
+func examplePage271() {
+	var porsche car
+	porsche.name = "Porsche 911 R"
+	porsche.topSpeed = 323
+	fmt.Println("Name:", porsche.name)
+	fmt.Println("Top speed:", porsche.topSpeed)
+
+	var bolts part
+	bolts.description = "Hex bolts"
+	bolts.count = 24
+	fmt.Println("Description:", bolts.description)
+	fmt.Println("Count:", bolts.count)
+}
+
+func printInfo(s subscriber) {
+	fmt.Println("Name:", s.name)
+	fmt.Println("Monthly rate:", s.rate)
+	fmt.Println("Active?", s.active)
+}
+
+func defaultSubscriber(name string) subscriber {
+	var s subscriber
+	s.name = name
+	s.rate = 5.99
+	s.active = true
+	return s
+}
+
+func examplesPage272to273() {
+	subscriber1 := defaultSubscriber("Aman Singh")
+	subscriber1.rate = 4.99
+	printInfo(subscriber1)
+	subscriber2 := defaultSubscriber("Beth Ryan")
+	printInfo(subscriber2)
+}
+
+func main() {
+	examplePage271()
+	examplesPage272to273()
+
+}
