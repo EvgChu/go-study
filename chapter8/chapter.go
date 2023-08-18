@@ -46,16 +46,44 @@ func defaultSubscriber(name string) subscriber {
 	return s
 }
 
+func applyDiscount(s *subscriber) {
+	s.rate = 4.99
+}
+
 func examplesPage272to273() {
 	subscriber1 := defaultSubscriber("Aman Singh")
 	subscriber1.rate = 4.99
 	printInfo(subscriber1)
 	subscriber2 := defaultSubscriber("Beth Ryan")
+	applyDiscount(&subscriber2)
 	printInfo(subscriber2)
+}
+
+func nitroBoost(c *car) {
+	c.topSpeed += 50
+}
+
+func doublePack(p *part) {
+	p.count *= 2
+}
+
+func examplePage280() {
+	var fuses part
+	fuses.description = "Fuses"
+	fuses.count = 5
+	doublePack(&fuses)
+	fmt.Println(fuses.description)
+	fmt.Println(fuses.count)
+	var mustang car
+	mustang.name = "Mustang Cobra"
+	mustang.topSpeed = 225
+	nitroBoost(&mustang)
+	fmt.Println(mustang.name)
+	fmt.Println(mustang.topSpeed)
 }
 
 func main() {
 	examplePage271()
 	examplesPage272to273()
-
+	examplePage280()
 }
