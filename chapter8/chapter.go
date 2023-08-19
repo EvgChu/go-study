@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"hfg/chapter8/magazine"
+)
 
 type part struct {
 	description string
@@ -82,8 +85,16 @@ func examplePage280() {
 	fmt.Println(mustang.topSpeed)
 }
 
+func examplePage289() {
+	address := magazine.Address{Street: "123 Oak St", City: "Omaha", State: "NE", PostalCode: "68111"}
+	subscriber := magazine.Subscriber{Name: "Aman Singh"}
+	subscriber.HomeAddress = address
+	fmt.Println(subscriber.HomeAddress)
+}
+
 func main() {
 	examplePage271()
 	examplesPage272to273()
 	examplePage280()
+	examplePage289()
 }
