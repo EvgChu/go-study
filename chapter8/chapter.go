@@ -88,8 +88,9 @@ func examplePage280() {
 func examplePage289() {
 	address := magazine.Address{Street: "123 Oak St", City: "Omaha", State: "NE", PostalCode: "68111"}
 	subscriber := magazine.Subscriber{Name: "Aman Singh"}
-	subscriber.HomeAddress = address
-	fmt.Println(subscriber.HomeAddress)
+	subscriber.Address = address
+	fmt.Println(subscriber.Address)
+	fmt.Println(subscriber.Street)
 }
 
 func main() {
