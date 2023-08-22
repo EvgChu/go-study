@@ -50,7 +50,18 @@ func taskPage312() {
 	four.Subtract(2)
 }
 
+func (n *Number) Display() {
+	fmt.Println(*n)
+}
+
+func taskPage315() {
+	number := Number(4)
+	number.Double()
+	number.Display()
+}
+
 func main() {
 	examplePage309()
 	taskPage312()
+	taskPage315()
 }
