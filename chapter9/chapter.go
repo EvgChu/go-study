@@ -2,6 +2,8 @@ package main
 
 import (
 	"fmt"
+	"hfg/chapter9/calendar"
+	"log"
 )
 
 type MyType string
@@ -60,8 +62,28 @@ func taskPage315() {
 	number.Display()
 }
 
+func examplePage338() {
+	date := calendar.Date{}
+	err := date.SetYear(2019)
+	if err != nil {
+		log.Fatal(err)
+	}
+	err = date.SetMonth(5)
+	if err != nil {
+		log.Fatal(err)
+	}
+	err = date.SetDay(27)
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Println(date.Year())
+	fmt.Println(date.Month())
+	fmt.Println(date.Day())
+}
+
 func main() {
 	examplePage309()
 	taskPage312()
 	taskPage315()
+	examplePage338()
 }
