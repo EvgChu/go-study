@@ -62,7 +62,24 @@ func examplePage362() {
 	toy.MakeSound()
 }
 
+type Robot string
+
+func (r Robot) MakeSound() {
+	fmt.Println("Beep Boop")
+}
+func (r Robot) Walk() {
+	fmt.Println("Powering legs")
+}
+
+func examplePage369() {
+	var noiseMaker NoiseMaker = Robot("Botco Ambler")
+	noiseMaker.MakeSound()
+	var robot Robot = noiseMaker.(Robot)
+	robot.Walk()
+}
+
 func main() {
 	examplePage359()
 	examplePage362()
+	examplePage369()
 }
