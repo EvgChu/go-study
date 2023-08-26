@@ -104,9 +104,23 @@ func examplePage375() {
 	}
 }
 
+type CoffeePot string
+
+func (c CoffeePot) String() string {
+	return string(c) + " coffee pot"
+}
+
+func examplePage376() {
+	coffeePot := CoffeePot("LuxBrew")
+	fmt.Println(coffeePot.String())
+	fmt.Println(coffeePot)
+	fmt.Printf("%s", coffeePot)
+}
+
 func main() {
 	examplePage359()
 	examplePage362()
 	examplePage369()
 	examplePage375()
+	examplePage376()
 }
