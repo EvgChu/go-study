@@ -117,10 +117,21 @@ func examplePage376() {
 	fmt.Printf("%s", coffeePot)
 }
 
+func AcceptAnything(thing interface{}) {
+}
+
+func examplePage379() {
+	AcceptAnything(3.1415)
+	AcceptAnything("A string")
+	AcceptAnything(true)
+	AcceptAnything(Whistle("Toyco Canary"))
+}
+
 func main() {
 	examplePage359()
 	examplePage362()
 	examplePage369()
 	examplePage375()
 	examplePage376()
+	examplePage379()
 }
