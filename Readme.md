@@ -77,8 +77,15 @@ err := fmt.Errorf("a height of %0.2f is invalid", -2.33333)
 ```
 
 
-## "sort
+## "sort"
 
 ```go
 sort.Strings(names)
+```
+
+## "io/ioutil"
+
+```go
+files, err := ioutil.ReadDir("my_directory") 
+
 ```
