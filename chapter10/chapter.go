@@ -127,6 +127,12 @@ func examplePage379() {
 	AcceptAnything(Whistle("Toyco Canary"))
 }
 
+func examplePage387() {
+	defer fmt.Println("Goodbye!")
+	fmt.Println("Hello!")
+	fmt.Println("Nice weather, eh?")
+}
+
 func main() {
 	examplePage359()
 	examplePage362()
@@ -134,4 +140,5 @@ func main() {
 	examplePage375()
 	examplePage376()
 	examplePage379()
+	examplePage387()
 }
