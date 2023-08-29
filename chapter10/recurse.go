@@ -6,6 +6,7 @@ import (
 	"log"
 	"math/rand"
 	"path/filepath"
+	"strconv"
 )
 
 func scanDirectory(path string) error {
@@ -13,16 +14,15 @@ func scanDirectory(path string) error {
 	files, err := ioutil.ReadDir(path)
 	if err != nil {
 		fmt.Printf("Returning error from scanDirectory(\"%s\") call\n", path)
-		return err
+		panic(err)
 	}
 	for _, file := range files {
 		filePath := filepath.Join(path, file.Name())
 		if file.IsDir() {
 			err := scanDirectory(filePath)
 			if err != nil {
-				panic(err)
 				fmt.Printf("Returning error from scanDirectory(\"%s\") call\n", path)
-				return err
+				panic(err)
 			}
 		} else {
 			fmt.Println(filePath)
@@ -32,10 +32,26 @@ func scanDirectory(path string) error {
 }
 
 func calmDown() {
-	recover()
+	fmt.Println("calmDown")
+	p := recover()
+	err, ok := p.(error)
+	if ok {
+		fmt.Println(err.Error())
+	}
+}
+
+type awardPrizeError int
+
+func (a awardPrizeError) Error() string {
+	fmt.Println("awardPrizeError Error")
+	errstr := strconv.Itoa(int(a))
+	return errstr + " + some text"
+
 }
 
 func awardPrize() {
+	fmt.Println("awardPrize call")
+
 	defer calmDown()
 	doorNumber := rand.Intn(3) + 10
 	if doorNumber == 1 {
@@ -48,16 +64,17 @@ func awardPrize() {
 
 		fmt.Println("You win a goat!")
 	} else {
-		panic(doorNumber)
-		fmt.Println("invalid door number")
-
+		panic(awardPrizeError(doorNumber))
 	}
 }
 
 func main() {
-	defer awardPrize()
 	defer calmDown()
-	err := scanDirectory("/")
+
+	defer awardPrize()
+	err := scanDirectory("bad")
+	fmt.Println("after scanDirectory")
+
 	if err != nil {
 		log.Fatal(err)
 	}
