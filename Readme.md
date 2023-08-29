@@ -89,3 +89,9 @@ sort.Strings(names)
 files, err := ioutil.ReadDir("my_directory") 
 
 ```
+
+## "path/filepath"
+
+```go
+		filePath := filepath.Join(path, file.Name())
+```
