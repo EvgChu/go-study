@@ -34,9 +34,14 @@ func scanDirectory(path string) error {
 func calmDown() {
 	fmt.Println("calmDown")
 	p := recover()
+	if p == nil {
+		return
+	}
 	err, ok := p.(error)
 	if ok {
 		fmt.Println(err.Error())
+	} else {
+		panic(p)
 	}
 }
 
