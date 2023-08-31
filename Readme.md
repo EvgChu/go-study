@@ -46,9 +46,10 @@ guess, err := strconv.Atoi(input)
 ## strings
 ```go
 string.TrimSpace(input)
+result := strings.Join(phrases[:len(phrases)-1], ", ")
 ```
 
-## http
+## http or "net/http"
 ```go
 response, err := http.Get("http://golang.org")
 ```
@@ -87,6 +88,7 @@ sort.Strings(names)
 
 ```go
 files, err := ioutil.ReadDir("my_directory") 
+body, err := ioutil.ReadAll(response.Body) // after http.Get
 
 ```
 
