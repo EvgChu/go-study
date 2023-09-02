@@ -95,5 +95,12 @@ body, err := ioutil.ReadAll(response.Body) // after http.Get
 ## "path/filepath"
 
 ```go
-		filePath := filepath.Join(path, file.Name())
+	filePath := filepath.Join(path, file.Name())
+```
+
+## "html/template"
+
+```go
+    html, err := template.ParseFiles("view.html")
+
 ```
