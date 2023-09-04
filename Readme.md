@@ -104,3 +104,9 @@ body, err := ioutil.ReadAll(response.Body) // after http.Get
     html, err := template.ParseFiles("view.html")
 
 ```
+
+##  "unicode/utf8"
+
+```go
+fmt.Println(utf8.RuneCountInString(asciiString))
+```
